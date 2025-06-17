@@ -1,7 +1,7 @@
 import torch
 import math
-from config import input_dim, device
-from config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
+from src.config import input_dim, device
+from src.config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
 
 def funr(t,x,yr,yi):
     return torch.zeros(yr.shape,device=device)

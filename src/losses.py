@@ -1,5 +1,5 @@
 import torch
-from config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
+from src.config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
 
 def simulate_Y_once(current_step, inp, model_y, model_y_bar, model_z, model_z_bar, funr, funi, fun_dGr, fun_dGi):
     '''

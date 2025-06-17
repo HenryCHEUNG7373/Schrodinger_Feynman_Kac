@@ -8,25 +8,25 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import torch
 
 # === Local Modules ===
-from config import (
+from src.config import (
     T, input_dim, neuron, N, device, dt, t_space,
     batch_size, times_in_one_epochs,
     num_epochs_terminal, num_epochs_general, window_size
 )
-from linear_case_related_functions import (
+from src.linear_case_related_functions import (
     funr, funi, fun_Gr, fun_Gi, fun_dGr, fun_dGi,
     true_solution_real, true_solution_img
 )
 '''
-from nonlinear_case_related_functions import (
+from src.nonlinear_case_related_functions import (
     funr, funi, fun_Gr, fun_Gi, fun_dGr, fun_dGi,
     true_solution_real, true_solution_img
 )
 '''
-from losses import loss_fn_till_end
-from train import train_backward_sweep
-from model import BSDEModel_y_series, BSDEModel_z_series
-from utils import draw_X_and_dW
+from src.losses import loss_fn_till_end
+from src.train import train_backward_sweep
+from src.model import BSDEModel_y_series, BSDEModel_z_series
+from src.utils import draw_X_and_dW
 
 # === Model Initialization ===
 # y stands for the real part of the solution

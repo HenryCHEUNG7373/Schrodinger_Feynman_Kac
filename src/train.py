@@ -1,4 +1,4 @@
-from config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
+from src.config import T, input_dim, neuron, N, device,dt, t_space, batch_size, times_in_one_epochs, num_epochs_terminal, num_epochs_general, window_size
 import torch
 from time import time
 from torch.cuda.amp import autocast, GradScaler
@@ -8,7 +8,7 @@ import datetime
 import torch.optim as optim
 import gc
 from torch.quasirandom import SobolEngine
-from utils import save_models, plot_graph_varies_one_axis
+from src.utils import save_models, plot_graph_varies_one_axis
 
 def train_backward_sweep(
     y, y_bar, z, z_bar,
